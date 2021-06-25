@@ -1035,7 +1035,7 @@
 				console.log("Refined variables: ",JSON.stringify(flowReturn));
 
 				
-				fetch("http://127.0.0.1:5000/pipeline", {
+				fetch("http://34.122.32.5:5000/pipeline", {
 				  method: "POST", 
 				  headers: {
 				  'Content-Type': 'application/json'
@@ -1044,7 +1044,7 @@
 				})
 				.then(res => res.text())
 				.then((data) => {
-					console.log("Actual data", data.link);
+					console.log("Actual data", data);
 					$('#info-panel-notes').replaceWith("Click here to download: <a href =\""+data+"\">"+data+"</a> ");
 				});
 
