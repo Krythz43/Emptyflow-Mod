@@ -13,7 +13,8 @@ exports.readme = `# Simply add all coloumns you want to join
 
 exports.html = `
 <div class="padding">
-	<div data-jc="textbox" data-jc-path="Test" class="m mt10">Will this appear in JSON?</div>
+	<div data-jc="textbox" data-jc-path="column1" class="m mt10">Name of first column to join</div>
+	<div data-jc="textbox" data-jc-path="column2" class="m mt10">Name of second column to join</div>
 </div>`;
 
 exports.install = function(instance) {

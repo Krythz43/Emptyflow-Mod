@@ -13,7 +13,7 @@ exports.readme = `# Specify the Date of Birth to calculate Age
 
 exports.html = `
 <div class="padding">
-	<div data-jc="textbox" data-jc-path="column" class="m mt10">Name Column containing Date Of Birth</div>
+	<div data-jc="textbox" data-jc-path="dob_column" class="m mt10">Name Column containing Date Of Birth</div>
 </div>`;
 
 exports.install = function(instance) {

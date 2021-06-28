@@ -15,7 +15,7 @@
 			"tab": "1624601222001",
 			"name": "Load To Warehouse",
 			"x": 617,
-			"y": 212,
+			"y": 209,
 			"connections": {},
 			"disabledio": {
 				"input": [],
@@ -87,15 +87,18 @@
 			},
 			"color": "#D770AD",
 			"notes": "",
-			"options": {}
+			"options": {
+				"column1": "Hiro",
+				"column2": "Shima"
+			}
 		},
 		{
 			"id": "1624603225722",
 			"component": "calage",
 			"tab": "1624601222001",
 			"name": "Calculate Age",
-			"x": 227,
-			"y": 78,
+			"x": 215,
+			"y": 93,
 			"connections": {
 				"0": [
 					{
@@ -121,7 +124,7 @@
 			"component": "fullnamecal",
 			"tab": "1624601222001",
 			"name": "Obtain Full Name",
-			"x": 212,
+			"x": 215,
 			"y": 214,
 			"connections": {
 				"0": [
