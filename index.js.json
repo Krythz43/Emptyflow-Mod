@@ -15,8 +15,8 @@
 			"thread": "",
 			"mode": "debug",
 			"overload": 0,
-			"date": "2021-06-28T15:19:53.766Z",
-			"memory": 8.6,
+			"date": "2021-06-28T15:21:53.769Z",
+			"memory": 8.63,
 			"rm": 0,
 			"fm": 0,
 			"wm": 0,
@@ -34,7 +34,7 @@
 			"errors": 0,
 			"timeouts": 0,
 			"online": 0,
-			"uptime": 266,
+			"uptime": 268,
 			"download": 0,
 			"upload": 0.368
 		}

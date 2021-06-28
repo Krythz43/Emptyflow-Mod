@@ -1,1 +1,4 @@
 node_modules
+tmp
+index.pid
+index.js.json
