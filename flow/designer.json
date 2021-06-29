@@ -14,42 +14,9 @@
 			"component": "loadcsv",
 			"tab": "1624601222001",
 			"name": "Load To Warehouse",
-			"x": 617,
-			"y": 209,
+			"x": 648,
+			"y": 217,
 			"connections": {},
-			"disabledio": {
-				"input": [],
-				"output": []
-			},
-			"state": {
-				"text": "",
-				"color": "gray"
-			},
-			"color": "#D770AD",
-			"notes": "",
-			"options": {}
-		},
-		{
-			"id": "1624601239714",
-			"component": "uploadcsv2",
-			"tab": "1624601222001",
-			"name": "Upload CSV 2",
-			"x": 1,
-			"y": 203,
-			"connections": {
-				"0": [
-					{
-						"index": "0",
-						"id": "1624603225722"
-					}
-				],
-				"1": [
-					{
-						"index": "0",
-						"id": "1624603236345"
-					}
-				]
-			},
 			"disabledio": {
 				"input": [],
 				"output": []
@@ -67,8 +34,8 @@
 			"component": "joincols",
 			"tab": "1624601222001",
 			"name": "Join Columns",
-			"x": 429,
-			"y": 212,
+			"x": 450,
+			"y": 218,
 			"connections": {
 				"0": [
 					{
@@ -88,17 +55,20 @@
 			"color": "#D770AD",
 			"notes": "",
 			"options": {
-				"column1": "Hiro",
-				"column2": "Shima"
+				"column1": "id_artists",
+				"column2": "id",
+				"where": "contains",
+				"csv1": "gs://spotify-dataset/tracks",
+				"csv2": "gs://spotify-dataset/artists"
 			}
 		},
 		{
-			"id": "1624603225722",
-			"component": "calage",
+			"id": "1624945328323",
+			"component": "splitdelim",
 			"tab": "1624601222001",
-			"name": "Calculate Age",
-			"x": 215,
-			"y": 93,
+			"name": "Split On Delimiter",
+			"x": 220,
+			"y": 267,
 			"connections": {
 				"0": [
 					{
@@ -117,15 +87,18 @@
 			},
 			"color": "#D770AD",
 			"notes": "",
-			"options": {}
+			"options": {
+				"column_name": "genres",
+				"delimiter": "."
+			}
 		},
 		{
-			"id": "1624603236345",
-			"component": "fullnamecal",
+			"id": "1624946282534",
+			"component": "delcol",
 			"tab": "1624601222001",
-			"name": "Obtain Full Name",
-			"x": 215,
-			"y": 214,
+			"name": "Delete Column",
+			"x": 218,
+			"y": 162,
 			"connections": {
 				"0": [
 					{
@@ -144,7 +117,67 @@
 			},
 			"color": "#D770AD",
 			"notes": "",
-			"options": {}
+			"options": {
+				"column_name": "release_date"
+			}
+		},
+		{
+			"id": "1624954764597",
+			"component": "uploadcsv",
+			"tab": "1624601222001",
+			"name": "Upload CSV",
+			"x": 31.017059326171875,
+			"y": 151.6363639831543,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1624946282534"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"color": "#D770AD",
+			"notes": "",
+			"options": {
+				"link": "gs://spotify-dataset/tracks"
+			}
+		},
+		{
+			"id": "1624954768801",
+			"component": "uploadcsv",
+			"tab": "1624601222001",
+			"name": "Upload CSV",
+			"x": 23.017059326171875,
+			"y": 260.6363639831543,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1624945328323"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"color": "#D770AD",
+			"notes": "",
+			"options": {
+				"link": "gs://spotify-dataset/artists"
+			}
 		}
 	],
 	"version": 622

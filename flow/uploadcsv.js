@@ -1,5 +1,5 @@
-exports.id = 'uploadcsv2';
-exports.title = 'Upload CSV 2';
+exports.id = 'uploadcsv';
+exports.title = 'Upload CSV';
 exports.version = '1.2.1';
 exports.group = 'DATAX Test 1';
 exports.author = 'Krithick';
